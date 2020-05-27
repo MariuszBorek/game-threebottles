@@ -26,7 +26,12 @@ public class Bottle {
     }
 
     public void addWater(int volumeOfWater) {
-        volumeOfWaterInTheBottle += volumeOfWater;
+//        if(volumeOfWater <= volumeOfWaterInTheBottle - volumeOfBottle) {
+            volumeOfWaterInTheBottle += volumeOfWater;
+//        } else {
+//            System.out.println("Bottle have not enough space, try again");
+//            addWater(volumeOfWater);
+//        }
     }
 
     public void subsWater(int volumeOfWater) {
@@ -40,19 +45,9 @@ public class Bottle {
         } else {
             System.out.println("Warning! Bottle 1 is full or not enough water int the bottle 2");
         }
-
-
-
     }
 
 
 
 
 }
-
-//        if(volumeOfWater <= bottle1.getVolumeOfWaterInTheBottle() - bottle1.getVolumeOfBottle() && volumeOfWater <= bottle2.getVolumeOfWaterInTheBottle()) {
-//                bottle1.addWater(volumeOfWater);
-//                bottle2.subsWater(volumeOfWater);
-//                } else {
-//                System.out.println("Warning! Bottle 1 is full or not enough water int the bottle 2");
-//                }

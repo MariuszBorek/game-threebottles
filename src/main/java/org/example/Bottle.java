@@ -4,6 +4,10 @@ public class Bottle {
     private int volumeOfBottle;
     private int volumeOfWaterInTheBottle;
 
+    public Bottle() {
+
+    }
+
     public Bottle(int volumeOfBottle) {
         this.volumeOfBottle = volumeOfBottle;
     }
@@ -26,12 +30,8 @@ public class Bottle {
     }
 
     public void addWater(int volumeOfWater) {
-//        if(volumeOfWater <= volumeOfWaterInTheBottle - volumeOfBottle) {
             volumeOfWaterInTheBottle += volumeOfWater;
-//        } else {
-//            System.out.println("Bottle have not enough space, try again");
-//            addWater(volumeOfWater);
-//        }
+
     }
 
     public void subsWater(int volumeOfWater) {

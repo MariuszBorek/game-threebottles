@@ -46,8 +46,4 @@ public class Bottle {
             System.out.println("Warning! Bottle 1 is full or not enough water int the bottle 2");
         }
     }
-
-
-
-
 }

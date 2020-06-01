@@ -11,10 +11,15 @@ public class Controller extends Bottle {
     }
 
     public void controller() {
-        while(true){
-            System.out.println("MENU");
+        while (true) {
+            System.out.println("__________________________________________MENU___________________________________________\n" +
+                    "|\t   sv - set bottles volume | pw - pour water from one bottle to second bottle   \t|\n" +
+                    "| a1 - add water to bottle 1 | a2 - add water to bottle 2 | a3 - add water to bottle 3  |\n" +
+                    "|\t                  gv - get actual volume of water in the bottles                 \t|\n" +
+                    "|_______________________________________________________________________________________|");
+            System.out.print("input >>");
             String act = in.next();
-            switch(act) {
+            switch (act) {
                 case "sv": {
                     System.out.println("set volume of bottle 1:");
                     bottle[0] = new Bottle(in.nextInt());
@@ -52,32 +57,32 @@ public class Controller extends Bottle {
                     int choose = in.nextInt();
                     switch (choose) {
                         case 12: {
-                            transferFromOneBottleToAnotherBottle(volumeOfWater, bottle[0], bottle[1]);
-                            controller();
-                            return;
-                        }
-                        case 13: {
-                            transferFromOneBottleToAnotherBottle(volumeOfWater, bottle[0], bottle[2]);
-                            controller();
-                            return;
-                        }
-                        case 21: {
                             transferFromOneBottleToAnotherBottle(volumeOfWater, bottle[1], bottle[0]);
                             controller();
                             return;
                         }
-                        case 23: {
-                            transferFromOneBottleToAnotherBottle(volumeOfWater, bottle[1], bottle[2]);
-                            controller();
-                            return;
-                        }
-                        case 31: {
+                        case 13: {
                             transferFromOneBottleToAnotherBottle(volumeOfWater, bottle[2], bottle[0]);
                             controller();
                             return;
                         }
-                        case 32: {
+                        case 21: {
+                            transferFromOneBottleToAnotherBottle(volumeOfWater, bottle[0], bottle[1]);
+                            controller();
+                            return;
+                        }
+                        case 23: {
                             transferFromOneBottleToAnotherBottle(volumeOfWater, bottle[2], bottle[1]);
+                            controller();
+                            return;
+                        }
+                        case 31: {
+                            transferFromOneBottleToAnotherBottle(volumeOfWater, bottle[0], bottle[2]);
+                            controller();
+                            return;
+                        }
+                        case 32: {
+                            transferFromOneBottleToAnotherBottle(volumeOfWater, bottle[1], bottle[2]);
                             controller();
                             return;
                         }
@@ -95,10 +100,7 @@ public class Controller extends Bottle {
                     controller();
                     return;
                 }
-
             }
-
         }
-
     }
 }
